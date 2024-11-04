@@ -1,0 +1,176 @@
+/* // Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... } 1 column
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... } 2 columns
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... } 3 column or more
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... } 3 column or more */
+
+/* Reset */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Root */
+:root {
+  --primary-color: #219f95;
+  --secondary-color-light: #afcedd;
+  --seconday-color-dark: #234894;
+  --black-color: #000;
+  --white-color: #fff;
+  --grey-color: #696969;
+
+  --border-radius: 8px;
+  --spacing: 0.8rem;
+}
+
+/* Typography */
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.4rem;
+}
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+p {
+  font-size: 1.6rem;
+}
+
+@media (min-width: 992px) {
+  body {
+    font-size: 1.6rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+  }
+  p {
+    font-size: 1.8rem;
+  }
+}
+
+/* container */
+
+.container {
+  width: 95%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 5rem 0;
+}
+
+/* Flex classes */
+.display-flex {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+}
+
+/* Panel*/
+.panel__header {
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 992px) {
+  .panel__header {
+    margin-bottom: 4.5rem;
+  }
+}
+.panel__grid {
+  display: grid;
+  column-gap: 3.5rem;
+  row-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  justify-content: center;
+}
+
+/* btn */
+.btn {
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 1.2rem 1.5rem;
+  cursor: pointer;
+
+}
+
+.btn--primary {
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  color: var(--white-color);
+  transition: all 300ms;
+}
+
+.btn--primary:hover {
+  border: 1px solid var(--primary-color);
+  background-color: var(--white-color);
+  color: var(--primary-color);
+}
+
+
+/* Ticket cards */
+.ticket-card {
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.ticket-uploads {
+  color: var(--seconday-color-dark);
+}
+
+.ticket-uploads__count {
+  padding: 6px 14px;
+  background-color: var(--secondary-color-light);
+  border-radius: var(--border-radius);
+  margin-left: var(--spacing);
+}
+
+.ticket-date,
+.content__id {
+  color: var(--grey-color);
+}
+
+.content__title {
+  margin-bottom: var(--spacing);
+}
+
+.user__img {
+  width: 3.5rem;
+  border-radius: var(--border-radius);
+  margin-left: var(--spacing);
+}
+
+@media (min-width: 992px) {
+  .user__img {
+    width: 4.5rem;
+  }
+}
